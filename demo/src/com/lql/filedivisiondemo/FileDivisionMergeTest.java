@@ -26,7 +26,7 @@ public class FileDivisionMergeTest {
             //生成num个切割文件
             for (int i = 0; i <num ; i++) {
                 out = new BufferedOutputStream(new FileOutputStream(new
-                        File("D:\\迅雷下载\\video\\"+i+"-"+targetFile.getName())));
+                        File(path +i+"-"+targetFile.getName())));
 
                 //判断读取的次数：此步的操作时为了防止按照cutSize读取文件，不能读完，最后一次则需要单独处理
                 if(cutSize>1024){
@@ -67,7 +67,7 @@ public class FileDivisionMergeTest {
 
         SequenceInputStream sis = new SequenceInputStream(elements);
         try {
-            BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(new File("D:\\迅雷下载\\video\\周杰伦《说好不哭》无水印MV"+"合并"+".mp4")));
+            BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(new File(path + "周杰伦《说好不哭》无水印MV"+"合并"+".mp4")));
             byte[] bytes = new byte[1024];
             int len= -1;
             while ((len = sis.read(bytes))!=-1){
@@ -92,10 +92,10 @@ public class FileDivisionMergeTest {
 
 
         try {
-            FileInputStream fin = new FileInputStream(new File("D:\\迅雷下载\\video\\0-周杰伦《说好不哭》无水印MV.mp4"));
-            FileInputStream fin1 = new FileInputStream(new File("D:\\迅雷下载\\video\\1-周杰伦《说好不哭》无水印MV.mp4"));
-            FileInputStream fin2 = new FileInputStream(new File("D:\\迅雷下载\\video\\2-周杰伦《说好不哭》无水印MV.mp4"));
-            FileInputStream fin3= new FileInputStream(new File("D:\\迅雷下载\\video\\3-周杰伦《说好不哭》无水印MV.mp4"));
+            FileInputStream fin = new FileInputStream(new File(path + "0-周杰伦《说好不哭》无水印MV.mp4"));
+            FileInputStream fin1 = new FileInputStream(new File(path + "1-周杰伦《说好不哭》无水印MV.mp4"));
+            FileInputStream fin2 = new FileInputStream(new File(path + "2-周杰伦《说好不哭》无水印MV.mp4"));
+            FileInputStream fin3= new FileInputStream(new File(path + "3-周杰伦《说好不哭》无水印MV.mp4"));
 
             //集合工具类
             Vector<InputStream> v = new Vector();

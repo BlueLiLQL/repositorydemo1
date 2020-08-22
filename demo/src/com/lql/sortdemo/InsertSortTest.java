@@ -11,8 +11,7 @@ import java.util.Arrays;
 public class InsertSortTest {
 
     public static void main(String[] args) {
-        int[] nums ={34,23,44,11,33,2,4,6,19,43};
-
+        int[] nums ={1,23,44,11,33,2,4,6,19,43};
         for (int i = 1,j,current; i < nums.length ; i++) {
             current = nums[i];
             //if(i-1 > 0 ) System.out.println("i-1=" + (i-1));
